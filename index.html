@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.cdnfonts.com/css/battlestar" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+     >
+  
+ 
+
+
+                
+                
+                
+</head>
+<body>
+    <div class="loby" id="lobby">
+        <div class="lobyOption">
+            
+            <div class="lobyOption_item" id="option">
+                
+            </div>
+        </div>
+        <div class="option-menu" id="menu">
+            <div class="menu__name">Write your Name </div>
+            <div class="menu__inputs">
+                <input type="text" class="menu__input" id="player1Name" placeholder="Player1">
+                <input type="text" class="menu__input" id="player2Name" placeholder="Player2">
+            </div>
+            <div class="menu__mapSkin"> Choose Your Skin On Map  </div>
+            <div class="menu__maps">
+          <div class="menu__map " id="map1"></div>
+          <div class="menu__map" id="map2"></div>
+          <div class="menu__map" id="map3"></div>
+          <div class="menu__map" id="map4"></div>
+          <div class="menu__map" id="map5"></div>
+        </div>
+        <div class="menu__playerSkin"> Choose Your Skin  </div>
+        <div class="menu__skins">
+            <div class="menu__left">
+                <div class="left__player">Player1</div>
+                <div class="left__skins">
+                    <div class="left__skin " id="left__skin1"></div>
+                    <div class="left__skin" id="left__skin2"></div>
+                    <div class="left__skin" id="left__skin3"></div>
+                   
+                </div>
+            </div>
+            <div class="menu__right">
+                <div class="right__player">Player2</div>
+                <div class="right__skins">
+                    <div class="right__skin" id="right__skin1"></div>
+                    <div class="right__skin"   id="right__skin2"></div>
+                    <div class="right__skin"   id="right__skin3"></div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+        </div>
+       
+       <div class="lobyStart" id="lobyBtn">Pres Start</div>
+     
+
+    </div>
+    <div class="wrap" id="wrap">
+        
+        <div class="gamePadTrigger" id="gamePadTrigger"></div>
+       
+        <div class="scoreContainer">
+            <div class="score">
+                <div class="scoreContainerInner" id="scoreContainerLeft">0</div>
+                <div class="time" id="timeRound"></div>
+                <div class="scoreContainerInner"  id="scoreContainerRight">0</div>
+            </div>
+            <div class="nameGroup"> 
+                <div class="name" id="name1">Player1</div>
+                <div class="name" id="name2">Player2</div>
+            </div>
+
+          
+        </div>
+       
+       <div class="target" id="target"></div>
+       
+        <div class="player player1" id="player1"></div>
+        <div class="player player2" id="player2"></div>
+        <div class="text" id="start"></div>
+        <div class="over" id="over"></div>
+        <div class="win" id="win"></div>
+        <div class="gamepad gamepad1" id="gamepad1">
+            <div class="row">
+                <div class="btn top" id="btn_top1"></div>
+            </div>
+             <div class="rowCenter">
+                <div class="btn" id="btn_left1"></div>
+                <div class="btn" id="btn_right1"></div>
+            </div>
+            <div class="row">
+                <div class="btn" id="btn_bottom1"></div>
+            </div>
+        </div>
+        <div class="gamepad gamepad2" id="gamepad2">
+            <div class="row">
+                <div class="btn" id="btn_top2"></div>
+            </div>
+             <div class="rowCenter">
+                <div class="btn" id="btn_left2"></div>
+                <div class="btn" id="btn_right2"></div>
+            </div>
+            <div class="row">
+                <div class="btn" id="btn_bottom2"></div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js">
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,649 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('http://fonts.cdnfonts.com/css/battlestar');
+                
+
+body{
+    overflow: hidden;
+    
+}
+.wrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+}
+
+.player {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.player1 {
+   
+    position: absolute;
+   
+   
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    transition: 0.3s;
+    opacity: 0;
+}
+.name{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Common Pixel', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    z-index: 4;}
+
+.player2 {
+  
+    position: absolute;
+   
+   
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.gamepad {
+    width: 150px;
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+   background-color: green;
+    border-radius: 5px;
+  
+}
+
+.gamepad1 {
+    position: fixed;
+    bottom: -200px;
+    right: 20px;
+    transition: 0.5s;
+}
+
+.gamepad2 {
+    position: fixed;
+    bottom: -200px;
+    transition: 0.5s;
+    left: 20px;
+}
+
+.target {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    opacity: 0;
+    border: 3px dashed #fff;
+}
+.scoreContainer{
+    width: 250px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    left: 800px;
+    
+    top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    
+    backdrop-filter: blur(10px);
+    z-index: 3;
+}
+.score{
+   
+    height: 40px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+   margin-top: -10px;
+    justify-content: space-between;
+}
+.nameGroup{
+    width: 100%;
+    height: 30px;
+   
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.player1 img{
+    width: 100%;
+    height: 100%;
+}
+.scoreContainerInner{
+    width: 50%;
+    height: 100px;
+    font-family: 'Common Pixel', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 20px;
+    z-index: 4;
+}
+.gamePadTrigger{
+    width: 70px;
+    height: 60px;
+   
+    position: fixed;
+    background-image: url(controller-buttons-png-8.png);
+    background-size: cover;
+    bottom: 0;
+    left: 50%;
+    margin-left: -25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    backdrop-filter: blur(10px);
+    background-color : rgba(0,0,0,0.4);
+}
+.loby{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:  url(https://steamuserimages-a.akamaihd.net/ugc/909030545047250042/56311C903F3FB52D41F1B43773233C77896CD94E/?imw=1024&imh=482&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
+    background-size: cover;
+    transition: 1s;
+}
+.lobyOption{
+    width: 95%;
+    height: 80px;
+    
+    margin-top: 20px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: end;
+}
+.lobyOption_item{
+    width: 30px;
+    height: 30px;
+    
+    background-image: url(settings.png);
+    background-size: cover;
+    transition: 1s;
+}
+.lobyOption_item:hover{
+    transition: 1s;
+    transform: rotate(360deg);
+}
+@import url('http://fonts.cdnfonts.com/css/common-pixel');
+.lobyStart{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    animation-name: animation;
+    animation-duration: 1s;
+    transition: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear ;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-family: 'Common Pixel', sans-serif;
+    font-size: 70px;
+    margin-top: 120px;
+    top: 0px;
+                                                
+
+}
+@keyframes animation{
+    0%{
+        top: 0px;
+    }
+    50%{top:-10px;}
+
+    100%{
+        top: 0;
+        
+    }
+}
+.input{
+    width: 100px;
+    height: 300px;
+    background-color: red;
+}
+.div{
+    width: 200px;
+    height: 300px;
+    background-color: #999;
+    margin-top: 500px;
+    
+}
+.text{
+    width: 100px;
+    height: 100px;
+   color: #fff;
+   font-family: 'Common Pixel', sans-serif;
+   font-size: 50px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -50px;
+   margin-top: -30px;
+
+   font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.over{
+    width: 500px;
+    height: 300px;
+   color: #fff;
+   font-family: 'Common Pixel', sans-serif;
+   font-size: 70px;
+   font-weight: 700;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -200px;
+   
+  
+   margin-top: -150px;
+   animation-name: animati;
+   animation-duration: 1s;
+   transition: 0.5s;
+   animation-iteration-count: infinite;
+   animation-timing-function:linear ;
+   font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.win{
+    width: 500px;
+    height: 100px;
+  color: #fff;
+   font-family: 'Common Pixel', sans-serif;
+   font-size: 50px;
+   font-weight: 700;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -200px;
+   
+  
+   margin-top: 50px;
+   animation-name: animati;
+   animation-duration: 1s;
+   transition: 0.5s;
+   animation-iteration-count: infinite;
+   animation-timing-function:linear ;
+   font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time{
+width: 50%;
+height: 100px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Common Pixel', sans-serif;
+color: #fff;
+font-size: 30px;
+font-weight: 700;
+margin-top: 20px;
+z-index: 4;}
+.option-menu{
+    width: 60%;
+    height: 95%;
+    background-color: #999;
+    border-radius: 20px;
+    margin-top: -80px;
+    display: none;
+    font-family: 'Common Pixel', sans-serif;
+    align-items: center;
+    padding-top: 20px;
+    transition: 0.5s;
+    flex-direction: column;
+}
+.menu__name{
+    color: #fff;
+    font-weight: 500;
+    font-size: 40px;
+    font-family: 'Common Pixel', sans-serif;
+    transition: 0.5s;
+
+}
+.menu__name:hover{
+    font-family:sans-serif ;
+    transition: 0.5s;
+}
+
+.menu__inputs{
+    width: 100%;
+    height: 60px;
+    
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+.menu__input{
+    width: 150px;
+    height: 35px;
+    background-color: #999;
+    color: #fff;
+    padding-left: 15px;
+    
+    border-radius: 15px;
+    border: 1px solid #fff;
+}
+.menu__mapSkin{
+    color: #fff;
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 30px;
+}
+.menu__mapSkin:hover{
+    font-family:sans-serif ;
+    transition: 0.5s;
+}
+
+.menu__maps{
+    width: 100%;
+    height: 100px;
+    
+    
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+.menu__map{
+    width: 110px;
+    height: 100px;
+    
+    border-radius: 15px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu__map:hover{
+    margin-top: -20px;
+    transition: 0.5s;
+}
+#map1{
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/909030545047250042/56311C903F3FB52D41F1B43773233C77896CD94E/?imw=1024&imh=482&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
+    background-size: cover;
+    
+}
+#map2{
+    background-image: url(https://i.pinimg.com/originals/46/ac/9e/46ac9e282d3c303934a72d941845785b.gif);
+    background-size: cover;
+}
+#map3{
+    background-image: url(https://64.media.tumblr.com/2ce4a735f4dbb8f133fd81fbaabd0af8/tumblr_nespxwV7Ze1rnbw6mo2_r1_1280.gifv);
+    background-size: cover;
+}
+#map4{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShW0gSrnmxIwTAvXw2vbQe1DoaBQcLe02MvQ&usqp=CAU);
+    background-size: cover;
+}
+#map5{
+    background-image: url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/171345804/original/0c110c67e7b089dbcef2e313d71f42e782ccdd86/colourfull-pixel-game-backgrounds.png);
+    background-size: cover;
+}
+.menu__playerSkin{
+    color: #fff;
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 30px;
+}
+.menu__playerSkin:hover{
+    font-family:sans-serif ;
+    transition: 0.5s;
+}
+
+.menu__skins{
+    width: 100%;
+    height: 300px;
+    
+    display: flex;
+    
+
+}
+.menu__left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+}
+.menu__right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+}
+.left__player{
+    color: #fff;
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.left__player:hover{
+    font-family:sans-serif ;
+    transition: 0.5s;
+}
+.right__player:hover{
+    font-family:sans-serif ;
+    transition: 0.5s;
+}
+.right__player{
+    color: #fff;
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.left__skins{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.right__skins{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.left__skin{
+    width: 90px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.left__skin:hover{
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.right__skin{
+    width: 90px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.right__skin:hover{
+    margin-top: 10px;
+    transition: 0.5s;
+}
+#left__skin1{
+    background-image: url(_R_m1ZIVfCWfA9KSfClF5g.png);
+    background-size: cover;
+}
+#left__skin2{
+    background-image: url(https://stickers.wiki/static/stickers/bspinsgeneral/file_433036.webp?ezimgfmt=rs:116x134/rscb1/ng:webp/ngcb1);
+    background-size: cover;
+    width: 70px;
+    height: 80px;
+}
+#left__skin3{
+    background-color: black;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+ 
+ }
+.left__input{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #666;
+    background-color: #999999;
+}
+#right__skin1{
+    background-image: url(https://preview.redd.it/s9y9mgvn3pm11.png?auto=webp&s=b9953922b3c7a15f6a399f2c7f5f905e67896fa7);
+    background-size: cover;
+    margin-left: 10px;
+}
+#right__skin2{
+    background-image: url(http://download.seaicons.com/icons/femfoyou/angry-birds/1024/angry-bird-black-icon.png);
+    background-size: cover;
+    width: 70px;
+    height: 80px;
+
+}
+#right__skin3{
+   background-color: yellow;
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+
+}
+.loby__information{
+    width: 40px;
+    height: 40px;
+    background-image: url(info.png);
+    background-size: cover;
+    position: absolute;
+    left: 94%;
+    transition: 0.5s;
+    top: 87%;
+}
+.loby__information:hover{
+    margin-top: -10px;
+    transition: 0.5s;
+}
+.menu__info{
+    
+        width: 40%;
+        height: 40%;
+        background-color: #999;
+        border-radius: 20px;
+        margin-top: -80px;
+        display: flex;
+        font-family: 'Common Pixel', sans-serif;
+        align-items: center;
+        padding-top: 20px;
+        transition: 0.5s;
+        flex-direction: column;
+        margin-top: 100px;
+    
+}
+
+
+  .info__swiper{
+      width: 100%;
+      height: 100%;
+      
+  }
+  .info__wrapper{
+      width: 100%;
+      height: 100%;
+      background-color: red;
+  }
+  .info__slide1{
+      width: 50%;
+      height: 50%;
+      background-color: #666;
+  }
+  .info__slide2{
+    width: 50%;
+    height: 50%;
+    background-color: #000;
+}
+.info__slide3{
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+
